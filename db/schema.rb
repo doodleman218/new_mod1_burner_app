@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_08_152522) do
+ActiveRecord::Schema.define(version: 2020_04_09_200036) do
 
   create_table "burners", force: :cascade do |t|
     t.string "name"
     t.boolean "candy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "camp_events", force: :cascade do |t|
+    t.integer "camp_id"
+    t.integer "event_id"
+    t.integer "burner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,8 +38,6 @@ ActiveRecord::Schema.define(version: 2020_04_08_152522) do
     t.string "name"
     t.string "location"
     t.string "season"
-    t.integer "camp_id"
-    t.integer "burner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

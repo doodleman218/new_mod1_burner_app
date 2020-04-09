@@ -1,6 +1,7 @@
 class Event < ActiveRecord::Base
-  belongs_to :burner
-  belongs_to :camp
+  has_many :camp_events
+  has_many :camps through: :camp_events
+  has_many :burners through: :camp_events
 
 
 end
