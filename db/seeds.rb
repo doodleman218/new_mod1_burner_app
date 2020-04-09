@@ -33,6 +33,9 @@ dragon = Camp.create(name: "Dragon Alley", camp_type: "interactive")
 lof = Event.create(name: "Lakes of Fire", location: "Midwest", season: "Summer")
 bm = Event.create(name: "Burning Man", location: "West Coast", season: "Summer")
 love = Event.create(name: "Love Burn", location: "East Coast", season: "Spring")
+soak = Event.create(name: "SOAK", location: "West Coast", season: "Fall")
+flip = Event.create(name: "Flipside", location: "Midwest", season: "Spring")
+
 # lof = Event.create(name: "Lakes of Fire", location: "Midwest", season: "Summer", camp_id: tea.id, burner_id: shadow.id)
 # lof = Event.create(name: "Lakes of Fire", location: "Midwest", season: "Summer", camp_id: tea.id, burner_id: zee.id)
 
@@ -42,6 +45,10 @@ love = Event.create(name: "Love Burn", location: "East Coast", season: "Spring")
 
 #camp_event seed data
 one = CampEvent.create(camp_id: tea.id, event_id: lof.id, burner_id: david.id)
+two = CampEvent.create(camp_id: tea.id, event_id: lof.id, burner_id: shadow.id)
+three = CampEvent.create(camp_id: tea.id, event_id: lof.id, burner_id: angel.id)
+
+
 
 
 binding.pry
